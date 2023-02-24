@@ -1,0 +1,28 @@
+basic:
+  cors_white_list:
+    - 0.0.0.0
+  popular_posts_from_last_days: 2
+  pagination:
+    maximum_blog_per_page: 100
+logger:
+  level: "info"
+http_server:
+  listen: ":8080"
+  read_timeout: "2s"
+  write_timeout: "3s"
+  read_header_timeout: "1s"
+  idle_timeout: "3m"
+database:
+  driver: "postgres"
+  host: "0.0.0.0"
+  port: 5432
+  db: "cryptos-authorization"
+  user: "ali"
+  password: "a1234567"
+  time_zone: "Asia/Tehran"
+trace_provider:
+  service_name: "cryptos-authorization"
+  deployment_environment: "local"
+  agent_host: "localhost"
+  agent_port: "6831"
+  sampler_ratio: 1.0
